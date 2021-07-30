@@ -1,17 +1,17 @@
 Dining API
 ==========
 
-CS50's Dining API provides programmatic access via HTTP to data from `Harvard University Dining Services <https://dining.harvard.edu/>`_ (HUDS), including menus for undergraduate dining halls, graduate dining halls, and some cafes on campus. The API provides endpoints for:
+Die Dining API von CS50 bietet programmatischen Zugriff über HTTP auf Daten von "Harvard University Dining Services <https://dining.harvard.edu/>'_ (HUDS), einschließlich Menüs für Studentenspeisesäle, Speisesaal für Absolventen und einige Cafés auf dem Campus. Die API stellt Endpunkte bereit für:
 
-* `Categories`_
-* `Locations`_
-* `Menus`_
-* `Recipes`_
+* `Kategorien`_
+* `Orte`_
+* `Menüs`_
+* `Rezepte`_
 
-Categories
+Kategorien
 ----------
 
-Getting Categories
+Kategorien holen
 ^^^^^^^^^^^^^^^^^^
 
 .. http:get:: /dining/categories
@@ -23,7 +23,7 @@ Getting Categories
     :>jsonarr integer id: A category's unique identifer. Usable as a primary key in a databse.
     :>jsonarr string name: A category's name.
 
-    **Example: Getting All Categories**
+    **Beispiel: Alle Kategorien holen**
 
     https://api.cs50.io/dining/categories
 
@@ -47,7 +47,7 @@ Getting Categories
 
             curl "https://api.cs50.io/dining/categories"
 
-Getting a Category
+Eine Kategorie holen
 ^^^^^^^^^^^^^^^^^^
 
 .. http:get:: /dining/categories/(id)
@@ -62,7 +62,7 @@ Getting a Category
     :>json integer id: A category's unique identifer. Usable as a primary key in a databse.
     :>json string name: A category's name.
 
-    **Example: Getting Fresh Fruit**
+    **Beispiel: Hole frische Früchte**
 
     https://api.cs50.io/dining/categories/32
 
@@ -85,10 +85,10 @@ Getting a Category
 
             curl "https://api.cs50.io/dining/categories/32"
 
-Locations
+Orte
 ---------
 
-Getting Locations
+Orte holen
 ^^^^^^^^^^^^^^^^^
 
 .. http:get:: /dining/locations
@@ -100,7 +100,7 @@ Getting Locations
     :>jsonarr integer id: A location's unique identifer. Usable as a primary key in a databse.
     :>jsonarr string name: A location's name.
 
-    **Example: Getting All Locations**
+    **Beispiel: Alle Orte holen**
 
     https://api.cs50.io/dining/locations
 
@@ -124,7 +124,7 @@ Getting Locations
 
             curl "https://api.cs50.io/dining/locations"
 
-Getting a Location
+Einen Ort holen
 ^^^^^^^^^^^^^^^^^^
 
 .. http:get:: /dining/locations/(id)
@@ -139,7 +139,7 @@ Getting a Location
     :>json integer id: A location's unique identifer. Usable as a primary key in a databse.
     :>json string name: A location's name.
 
-    **Example: Getting Annenberg Hall**
+    **Beispiel:  Annenberg Hall holen**
 
     https://api.cs50.io/dining/locations/7
 
@@ -162,13 +162,13 @@ Getting a Location
 
             curl "https://api.cs50.io/dining/locations/7"
 
-Menus
+Menüs
 -----
 
 .. note::
    Each query parameter can have multiple values, as by including it in a URL multiple times.
 
-Getting Menus 
+Menüs holen
 ^^^^^^^^^^^^^
 
 .. http:get:: /dining/menus
@@ -187,7 +187,7 @@ Getting Menus
     :>jsonarr integer id: A recipe's unique identifer. Usable as a primary key in a databse.
     :>jsonarr string name: A recipe's name.
 
-    **Example: Getting Annenberg Hall's Lunch Menu for 2 December 2019**
+    **Beispiel: Das Annenberg Hall's Mittagsmenü für den 2 Dezember 2019 holen**
 
     https://api.cs50.io/dining/menus?date=2019-12-02&location=7&meal=1
 
@@ -210,10 +210,10 @@ Getting Menus
 
             curl "https://api.cs50.io/dining/menus?date=2019-12-02&location=7&meal=1"
 
-Recipes
+Rezepte
 -------
 
-Getting Recipes
+Rezepte holen
 ^^^^^^^^^^^^^^^^^^
 
 .. http:get:: /dining/recipes
@@ -249,7 +249,7 @@ Getting Recipes
 
             curl "https://api.cs50.io/dining/recipes"
 
-Getting a Recipe
+Ein Rezept holen
 ^^^^^^^^^^^^^^^^
 
 .. http:get:: /dining/recipes/(id)
@@ -264,7 +264,7 @@ Getting a Recipe
     :>json integer id: A recipe's unique identifer. Usable as a primary key in a databse.
     :>json string name: A recipe's name.
 
-    **Example: Getting Kabocha Squash Soup**
+    **Beispiel: Kabocha Squash Suppe holen**
 
     https://api.cs50.io/dining/recipes/22011
 
@@ -287,7 +287,7 @@ Getting a Recipe
 
             curl "https://api.cs50.io/dining/recipes/22011"
 
-Acknowledgements
+Danksagung:
 ----------------
 
-Special thanks to CS50's friends at `HUDS <https://dining.harvard.edu/>`_ and `HUIT <https://huit.harvard.edu/>`_ for this API's data!
+Vielen Dank an CS50's Freunde von `HUDS <https://dining.harvard.edu/>`_ und `HUIT <https://huit.harvard.edu/>`_ für diese API Daten!
