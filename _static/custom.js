@@ -1,6 +1,6 @@
 $(function() {
 
-    // Format these toctree entries as literals, since toctree directive can't format entries itself
+    // Formatieren Sie diese Toctree-Einträge als Literale, da die toctree-Direktive Einträge selbst nicht formatieren kann
     const wrapper = $('<code class="docutils literal notranslate"><span class="pre"></span></code>');
     for (let caption of ['Command-Line Tools', 'Libraries']) {
         let $ul = $('.wy-menu > p > span:contains("' + caption + '")').parent().next('ul');
