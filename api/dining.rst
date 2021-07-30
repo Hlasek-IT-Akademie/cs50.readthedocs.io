@@ -166,7 +166,7 @@ Menüs
 -----
 
 .. note::
-   Each query parameter can have multiple values, as by including it in a URL multiple times.
+  Jeder Abfrageparameter kann mehrere Werte haben, z. B. indem er mehrmals in eine URL aufgenommen wird.
 
 Menüs holen
 ^^^^^^^^^^^^^
