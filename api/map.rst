@@ -1,12 +1,12 @@
 Map API
 =======
 
-CS50's Map API provides programmatic access via HTTP to data from `map.harvard.edu <https://map.harvard.edu/>`_.
+CS50's Map API bietet programmatischen Zugriff über HTTP zu Daten von `map.harvard.edu <https://map.harvard.edu/>`_.
 
-Buildings
+Gebäude
 ---------
 
-Getting Buildings
+Gebäude holen
 ^^^^^^^^^^^^^^^^^
 
 .. http:get:: /map/buildings
@@ -25,7 +25,7 @@ Getting Buildings
     :>jsonarr string image: URL of a building's image, if any.
     :>jsonarr string name: A building's name, if any.
 
-    **Example #1: Getting All Buildings**
+    **Beispiel #1: Alle Gebäude holen**
 
     https://api.cs50.io/map/buildings
 
@@ -49,7 +49,7 @@ Getting Buildings
 
             curl "https://api.cs50.io/map/buildings"
 
-    **Example #2: Getting All Wigglesworth Buildings**
+    **Beispiel #2: Alle Wigglesworth Gebäude holen**
 
     https://api.cs50.io/map/buildings?name=wigglesworth
 
@@ -73,7 +73,7 @@ Getting Buildings
 
             curl "https://api.cs50.io/map/buildings?name=wigglesworth"
 
-    **Example #3: Getting All Buildings on Oxford Street**
+    **Beispiel #3: Alle Gebäude on Oxford Street holen**
 
     https://api.cs50.io/map/buildings?address=oxford%20street
 
@@ -97,7 +97,7 @@ Getting Buildings
 
             curl "https://api.cs50.io/map/buildings?name=oxford%20street"
 
-Getting a Building
+Ein Gebäude holen
 ^^^^^^^^^^^^^^^^^^
 
 .. http:get:: /map/buildings/(id)
@@ -116,7 +116,7 @@ Getting a Building
     :>json string image: URL of a building's image, if any.
     :>json string name: A building's name, if any.
 
-    **Example #1: Getting Mather House**
+    **Beispiel #1: Mather House holen**
 
     https://api.cs50.io/map/buildings/1358
 
@@ -139,7 +139,7 @@ Getting a Building
 
             curl "https://api.cs50.io/map/buildings/1358"
 
-Acknowledgements
+Danksagung
 ----------------
 
-Special thanks to CS50's friends at Harvard's `Center for Geographic Analysis <https://gis.harvard.edu/>`_ for this API's data!
+Vielen Dank an CS50's Freunde am Harvard's `Center für Geographische Analysen <https://gis.harvard.edu/>`_ für diese API Daten!
